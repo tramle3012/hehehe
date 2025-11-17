@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="top">Example Cafe Menu</h1>
+
+    <p>
+        <a href="#starters">Starters</a> |
+        <a href="#maincourses">Main Courses</a> |
+        <a href="#desserts">Desserts</a>
+    </p>
+
+    <h1 id="starters">Starters</h1>
+        <ul>
+            <li>Chestnut and Mushroom Goujons (<u style="color:blue;">v</u>)</li>
+            <li>Goat Chese Salad (<u style="color:blue;">v</u>)</li>
+            <li>Honey Soy Chicken Kebabs</li>
+            <li>Seafood Salad</li>
+        </ul>
+            <p><a href="#top">Back to top</a></p>
+
+    <h1 id="maincourses">Main Courses</h1>
+        <ul>
+            <li>Spinach and Ricotta Roulad (<u style="color:blue;">v</u>)</li>
+            <li>Beef Tourandos with Mustard and Dill Sauce</li>
+            <li>Roast Chicken Salad</li>
+            <li>Icelandic Cod with Parsley Sauce</li>
+            <li>Mushroom Wellington (<u style="color:blue;">v</u>)</li>
+        </ul>
+
+            <p><a href="#top">Back to top</a></p>
+
+    <h1 id="desserts">Desserts</h1>
+        <ul>
+            <li>Lemon Sorbet (<u style="color:blue;">v</u>)</li>
+            <li>Chocolate Mud Pie (<u style="color:blue;">v</u>)</li>
+            <li>Pecan pie (<u style="color:blue;">v</u>)</li>
+            <li>Selection of Fine Chese from Around the World</li>
+        </ul>
+
+             <p><a href="#top">Back to top</a></p>
+
+    <p>Items marked with a (v) are suitable for vegetarians</p>
+    
+<!-- debug -->
+<script type="text/javascript">
+    (function (l) {
+      if (l.search[1] === "/") {
+        var decoded = l.search
+          .slice(1)
+          .split("&")
+          .map(function (s) {
+            return s.replace(/~and~/g, "&");
+          })
+          .join("?");
+        window.history.replaceState(
+          null,
+          null,
+          l.pathname.slice(0, -1) + decoded + l.hash
+        );
+      }
+    })(window.location);
+  </script>
+
+</body>
+</html>
